@@ -6,7 +6,7 @@ const authenticate = require("../../middlewares/authenticate")
 
 const router = express.Router()
 
-const ctrlWrapper = require("../../helpers/ctrlWrapper")
+const {ctrlWrapper} = require("../../helpers")
 
 router.get('/', authenticate, ctrlWrapper(controller.listContacts))
 
